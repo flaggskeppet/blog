@@ -5,7 +5,8 @@ html
         link(rel="stylesheet", href="/vendor/toastr/toastr.css")
         link(rel="stylesheet", href="/css/site.css")
     body(ng-app='app')
-    div
-    p Hello from layout.jade!
+    div(class="container")
+        div(class="jumbotron")
+            h1 Nodeblog
         block main-content
         include scripts

@@ -1,5 +1,5 @@
 var mongoose = require('mongoose'),
-    blogModel = require('../models/Blog');
+    blogPostModel = require('../models/BlogPost');
 
 module.exports = function(config) {
   mongoose.connect(config.db);
@@ -10,5 +10,5 @@ module.exports = function(config) {
   });
 
   
-  blogModel.createDefaultBlogPosts();
+  blogPostModel.createDefaultBlogPosts();
 }

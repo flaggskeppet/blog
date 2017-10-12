@@ -1,5 +1,5 @@
 var mongoose = require('mongoose'),
-    blog = require('../controllers/blog');
+    blogPostController = require('../controllers/blogPostController');
 
 module.exports = function (app) {
     app.get('/partials/*', function (req, res) {
@@ -7,7 +7,7 @@ module.exports = function (app) {
         res.render('../../public/app/' + req.params[0]);
     });
 
-    app.get('/api/blog_list', blog.getBloglist);
+    app.get('/api/blog_post', blogPostController.getBlogPosts);
 
     app.get('*', function (req, res) {
         console.log("app.get *")

@@ -8,7 +8,6 @@ module.exports = function(config) {
   db.once('open', function callback() {
     console.log('blog db opened');
   });
-
   
   blogPostModel.createDefaultBlogPosts();
 }

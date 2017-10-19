@@ -2,14 +2,10 @@
   .pull-right
     form.form-inline
       .form-group
-        input.form-control(ng-model="searchText", placeholder="Filter")
+        input.form-control(ng-model="searchText", placeholder="Filter posts")
       .form-group.margin-left-med
-  table.table.table-hover.table-striped.table-condensed
-    thead
-      tr
-        th Title
-        th Text
-    tbody
-      tr(ng-repeat="blog in blogs | filter:searchText | orderBy:sortOrder")
-        td {{blog.header}}
-        td {{blog.text}}
+  div(ng-repeat="blog in blogs | filter:searchText | orderBy:sortOrder")
+    h2 {{blog.header}}
+    div {{blog.text}} 
+    div 
+      a(href="blog_post/{{blog._id}}") read more

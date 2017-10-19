@@ -7,7 +7,12 @@ angular.module('app').config(function ($routeProvider, $locationProvider) {
     .when('/blog', {
       templateUrl: '/partials/blog/blog-list',
       controller: 'blogListController',
-      resolve: function(){console.log("blog route was hit!")}
+      resolve: function(){}
+    })
+    .when('/blog_post/:id', {
+      templateUrl: '/partials/blog/blog-post',
+      controller: 'blogPostController',
+      resolve: function(){console.log("blog-post")}
     })
 });
 

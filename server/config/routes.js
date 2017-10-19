@@ -8,6 +8,8 @@ module.exports = function (app) {
     });
 
     app.get('/api/blog_post', blogPostController.getBlogPosts);
+    app.get('/api/blog_post/:id', blogPostController.getBlogPostById);
+    
 
     app.get('*', function (req, res) {
         console.log("app.get *")

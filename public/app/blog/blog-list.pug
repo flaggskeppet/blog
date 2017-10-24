@@ -1,9 +1,11 @@
 .container.top-padding-med
-  .pull-right
+  .row.pull-right
+    a(href="/create-blog-post") Create new post
     form.form-inline
       .form-group
         input.form-control(ng-model="searchText", placeholder="Filter posts")
       .form-group.margin-left-med
+  
   div(ng-repeat="blog in blogs | filter:searchText | orderBy:sortOrder")
     h2 {{blog.header}}
     div {{blog.text}} 

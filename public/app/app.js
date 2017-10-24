@@ -6,13 +6,21 @@ angular.module('app').config(function ($routeProvider, $locationProvider) {
   $routeProvider
     .when('/blog', {
       templateUrl: '/partials/blog/blog-list',
-      controller: 'blogListController',
-      resolve: function(){}
+      controller: 'blogListController'
     })
     .when('/blog_post/:id', {
       templateUrl: '/partials/blog/blog-post',
       controller: 'blogPostController',
-      resolve: function(){console.log("blog-post")}
+    })
+    .when('/create-blog-post', {
+      templateUrl: '/partials/blog/create-blog-post',
+      controller: 'blogPostCreateController',
+      resolve: function(){console.log("permissions check here later")}
+    })
+    .when('/edit-blog-post', {
+      templateUrl: '/partials/blog/edit-blog-post',
+      controller: 'blogPostEditController',
+      resolve: function(){console.log("permissions check here later")}
     })
 });
 

@@ -1,0 +1,14 @@
+.container
+    .col-md-8
+        form(name="publishForm")
+            .row
+                .form-group
+                    input.form-control(name="header" ng-model="header", placeholder="Header" required)
+            .row
+                p
+                .form-group
+                    textarea.form-control(name="text" ng-model="text", placeholder="Text" required)
+                p
+                .form-group
+                    button.btn.btn-primary(type="submit" ng-click="publish()" ng-disabled="publishForm.$invalid") Publish
+    

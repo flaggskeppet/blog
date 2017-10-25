@@ -9,6 +9,7 @@ module.exports = app => {
 
     app.get('/api/blog_post', blogPostController.getBlogPosts);
     app.get('/api/blog_post/:id', blogPostController.getBlogPostById);
+    app.put('/api/blog_post/:id', blogPostController.updateBlogPost);
     app.post('/api/blog_post', blogPostController.createBlogPost);
 
     app.get('*', (req, res) => {

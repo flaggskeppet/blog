@@ -17,8 +17,8 @@ angular.module('app').config(function ($routeProvider, $locationProvider) {
       controller: 'blogPostCreateController',
       resolve: function(){console.log("permissions check here later")}
     })
-    .when('/edit-blog-post', {
-      templateUrl: '/partials/blog/edit-blog-post',
+    .when('/edit-blog-post/:id', {
+      templateUrl: '/partials/blog/create-blog-post',
       controller: 'blogPostEditController',
       resolve: function(){console.log("permissions check here later")}
     })
